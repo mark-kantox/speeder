@@ -73,6 +73,7 @@ alias Oj="O 'https://kantox.atlassian.net/secure/Dashboard.jspa'"
 alias Ol="O 'http://localhost:3000'"
 alias Oh="O 'http://www.github.com'"
 alias Ohb="O 'https://github.com/kantox/kantox-flow/branches'"
+alias Ot="O 'https://www.localeapp.com/projects/7541'"
 
 alias oc="open -a 'Visual Studio Code'"
 alias of="open -a 'Finder'"
@@ -88,6 +89,7 @@ alias p3="python3"
 alias rc="rails c"
 alias rs="rails s"
 alias rrd="rake db:migrate"
+alias rcf="vim ~/.irbrc"
 alias r="rake"
 alias rt="rspec"
 
@@ -133,7 +135,7 @@ function mm
 end
 
 function dot 
-  cp ~/.vimrc ~/Documents/dotfiles; and cp ~/.gitignore-global ~/Documents/dotfiles; and cp ~/.config/fish/config.fish ~/Documents/dotfiles; and cp ~/.irbrc ~/Documents/dotfiles; and cd ~/Documents/dotfiles; and gaa; and gcm "dotfiles commit"; and gu 
+  cp ~/.vimrc ~/Documents/dotfiles; and cp ~/.gitignore-global ~/Documents/dotfiles; and cp ~/.config/fish/config.fish ~/Documents/dotfiles; and cp ~/.irbrc ~/Documents/dotfiles; and cd ~/Documents/dotfiles; and gaa; and gcm "dotfiles commit"; and gu; and k 
 end
 
 function gwm
