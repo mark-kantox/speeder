@@ -35,6 +35,7 @@ alias gb="git branch"
 alias gs="git status"
 alias gd="git diff"
 alias gci="git checkout"
+alias gcm="git commit -m"
 alias gcob="git checkout -b"
 alias gcod="git checkout develop"
 alias gld="git log --graph --oneline --decorate --all"
@@ -43,6 +44,8 @@ alias gn="git symbolic-ref HEAD --short"
 alias gp="git pull"
 alias gprd="git pull; and rake db:migrate"
 alias git="hub"
+alias gu="git push"
+alias guf="git push --set-upstream origin master"
 
 ## KANTOX
 # kantox docker
@@ -120,5 +123,5 @@ function mm
 end
 
 function dot 
- cp ~/.vimrc ~/Documents/dotfiles; and cp ~/.gitignore-global ~/Documents/dotfiles; and cp ~/.config/fish/config.fish ~/Documents/dotfiles 
+ cp ~/.vimrc ~/Documents/dotfiles; and cp ~/.gitignore-global ~/Documents/dotfiles; and cp ~/.config/fish/config.fish ~/Documents/dotfiles; and gaa; and gcm "dotfiles commit"; and gu 
 end
