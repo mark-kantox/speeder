@@ -20,11 +20,17 @@ alias bru="brew uninstall"
 alias c="code"
 alias ca="code ."
 
+alias d="cd"
+alias dd="cd ~/Documents"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+
 ## ELIXIR
 alias e="elixir"
 alias emt="mix test"
 
 ## FISH
+alias f="fish"
 alias fcf="vim ~/.config/fish/config.fish"
 
 ## GIT
@@ -43,12 +49,15 @@ alias gmd="git merge develop"
 alias gn="git symbolic-ref HEAD --short"
 alias gp="git pull"
 alias gprd="git pull; and rake db:migrate"
-alias git="hub"
+alias gscm="env CI=1 git commit -m"
+alias gkrcm="env SKIP=Rubocop git commit -m"
 alias gu="git push"
 alias guf="git push --set-upstream origin master"
+alias git="hub"
 
 ## KANTOX
-# kantox docker
+
+alias k="cd ~/Documents/kantox-flow"
 alias kdo="./docker_run.sh bash"
 
 # kantox translations
@@ -66,6 +75,7 @@ alias Oh="O 'http://www.github.com'"
 alias Ohb="O 'https://github.com/kantox/kantox-flow/branches'"
 
 alias oc="open -a 'Visual Studio Code'"
+alias of="open -a 'Finder'"
 alias os="open -a 'Slack'"
 alias oy="open -a 'Spotify'"
 alias oq="open -a 'Sequel Pro'"
@@ -119,9 +129,13 @@ function Ogb
 end
 
 function mm
- m $argv; and cd $argv
+  m $argv; and cd $argv
 end
 
 function dot 
- cp ~/.vimrc ~/Documents/dotfiles; and cp ~/.gitignore-global ~/Documents/dotfiles; and cp ~/.config/fish/config.fish ~/Documents/dotfiles; and gaa; and gcm "dotfiles commit"; and gu 
+  cp ~/.vimrc ~/Documents/dotfiles; and cp ~/.gitignore-global ~/Documents/dotfiles; and cp ~/.config/fish/config.fish ~/Documents/dotfiles; and cp ~/.irbrc ~/Documents/dotfiles; and cd ~/Documents/dotfiles; and gaa; and gcm "dotfiles commit"; and gu 
+end
+
+function gwm
+  git add .;and git commit -m $argv; and git push
 end
