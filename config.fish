@@ -20,7 +20,7 @@ alias bru="brew uninstall"
 alias c="code"
 alias ca="code ."
 
-alias d="cd"
+alias d="ppen -a docker"
 alias dd="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
@@ -139,5 +139,10 @@ function dot
 end
 
 function gwm
-  git add .;and git commit -m $argv; and git push
+  git add .;and env CI=1 git commit -m $argv; and git push
 end
+
+function gps
+  git push --set-upstream origin (gn)
+end
+
